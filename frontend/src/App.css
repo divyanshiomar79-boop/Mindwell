@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f5;
+}
+
+/* CONTAINER */
+.container {
+  text-align: center;
+  padding-top: 80px;
+}
+
+/* CARD */
+.card {
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 500px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 30px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+}
+
+/* DARK MODE */
+.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+  min-height: 100vh;
+}
+
+.dark .card {
+  background-color: #1e1e1e;
+}
+
+.dark .dark-title {
+  color: #ffffff;
+}
+
+/* INPUTS */
+textarea, input, select {
+  width: 90%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+/* BUTTON BASE (LIGHT UNIVERSAL COLOR) */
+.btn {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #4f6f52;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* SPECIAL BUTTONS */
+.primary {
+  background: #2f4f4f;
+}
+
+.export {
+  background: #6c5ce7;
+}
+
+.delete {
+  background: #e74c3c;
+}
+
+/* PROMPT BOX */
+.prompt-box {
+  background: #e8f5e9;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* BREATHING */
+.breathing-container {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.breathing-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #7fd1ae;
+  transition: all 4s ease-in-out;
+}
+
+.breathing-circle.active {
+  transform: scale(1.8);
+  background: #a0e7e5;
+}
+
+/* TEXT */
+.breathing-text {
+  font-size: 14px;
+  color: #444;
+}
+
+.dark .breathing-text {
+  color: #ddd;
+}
+
+/* ENTRY CARD */
+.entry-card {
+  background: rgba(255,255,255,0.7);
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 12px;
+}
+
+.dark .entry-card {
+  background: #2a2a2a;
+}
+
+/* PREMIUM BADGE */
+.premium-badge {
+  background: linear-gradient(45deg, #6c5ce7, #00b894);
+  color: white;
+  padding: 6px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.no-pdf {
+  display: block;
+}
+
+/* 🚨 THIS IS THE MAGIC FOR PDF */
+@media print {
+  .no-pdf {
+    display: none !important;
+  }
+}
+.dark h1,
+.dark h2{
+  color: #e6d5ff;   
+}
+
+.app-title {
+  color: #2f4f4f;   
+}
+/* LOGIN SCREEN */
+.login-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#e0f7fa, #f4f7f5);
+}
+
+/* SECURE BADGE */
+.secure-badge {
+  background: #2ecc71;
+  color: white;
+  padding: 6px;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-size: 12px;
+}
+
+/* BETTER EMPTY STATE */
+.empty-state {
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* BREATHING PULSE EFFECT */
+.pulse-ring {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 2px solid #7fd1ae;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
